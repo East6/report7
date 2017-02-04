@@ -24,6 +24,12 @@ public class Main {
         JPanel panel_W;
         JPanel panel_N;
 
+        //ボタンまとめる用のパネルの変数を定義#
+        JPanel botton_matomeru;
+
+        //frameにaddするようのJPanelの変数を定義#
+        JPanel panel_ookii;
+
         //ボタン変数定義
         JButton btn_a;
         JButton btn_i;
@@ -85,6 +91,10 @@ public class Main {
         JButton btn_n3;
         JButton btn_n4;
 
+        //JTextフィールド変数を定義#
+        JTextField text;
+
+
 
         //フレームのオブジェクト作成
         frame = new JFrame("作るだけ");
@@ -100,6 +110,7 @@ public class Main {
         panel_R = new JPanel();
         panel_W = new JPanel();
         panel_N = new JPanel();
+
 
         //ボタンのオブジェクト作成
         btn_a = new JButton("あ");
@@ -162,8 +173,17 @@ public class Main {
         btn_n3 = new JButton("");
         btn_n4 = new JButton("");
 
-        //フレームのレイアウトを5行一列のグリッドレイアウトにする。
-        frame.setLayout(new GridLayout(1,11));
+        //テキストフィールドのオブジェクトを生成#
+        text = new JTextField("テキストフィールドです。",0);
+
+        //botton_matomeruパネルのオブジェクトを作成#
+        botton_matomeru = new JPanel();
+
+        //panel_ookiiパネルのオブジェクトを作成#
+        panel_ookii = new JPanel();
+
+        //ボタンまとめる用のJPanelを5行一列のグリッドレイアウトにする。
+        botton_matomeru.setLayout(new GridLayout(1,11));
 
         //パネルのレイアウトを5行1列のグリッドレイアウトにする
         panel_A.setLayout(new GridLayout(5,1));
@@ -176,6 +196,9 @@ public class Main {
         panel_R.setLayout(new GridLayout(5,1));
         panel_W.setLayout(new GridLayout(5,1));
         panel_N.setLayout(new GridLayout(5,1));
+
+        //panel_ookiiのレイアウトをボーターレイアウトにする
+        panel_ookii.setLayout(new BorderLayout());
 
         //パネルにボタンをセット
         panel_A.add(btn_a);
@@ -238,17 +261,26 @@ public class Main {
         panel_N.add(btn_n3);
         panel_N.add(btn_n4);
 
-        //パネルをフレームにセット
-        frame.add(panel_N);
-        frame.add(panel_W);
-        frame.add(panel_R);
-        frame.add(panel_Y);
-        frame.add(panel_M);
-        frame.add(panel_H);
-        frame.add(panel_T);
-        frame.add(panel_S);
-        frame.add(panel_K);
-        frame.add(panel_A);
+        //パネルをボタンまとめるようパネルにセット
+        botton_matomeru.add(panel_N);
+        botton_matomeru.add(panel_W);
+        botton_matomeru.add(panel_R);
+        botton_matomeru.add(panel_Y);
+        botton_matomeru.add(panel_M);
+        botton_matomeru.add(panel_H);
+        botton_matomeru.add(panel_T);
+        botton_matomeru.add(panel_S);
+        botton_matomeru.add(panel_K);
+        botton_matomeru.add(panel_A);
+
+        //ボタンまとめるようパネルをpanel_ookiiのCENTERにセット
+        panel_ookii.add(botton_matomeru);
+
+        //panel_ookiiのSOUNTHにテキストフィールドをセット
+        panel_ookii.add(text,BorderLayout.SOUTH);
+
+        //フレームにpanel_ookiiをセット
+        frame.add(panel_ookii);
 
         frame.setSize(250,100);
         frame.setVisible(true);
