@@ -17,12 +17,12 @@ public class Main {
         JPanel panel_K;
         JPanel panel_S;
         JPanel panel_T;
+        JPanel panel_N;
         JPanel panel_H;
         JPanel panel_M;
         JPanel panel_Y;
         JPanel panel_R;
         JPanel panel_W;
-        JPanel panel_N;
 
         //ボタンまとめる用のパネルの変数を定義#
         JPanel botton_matomeru;
@@ -54,6 +54,12 @@ public class Main {
         JButton btn_tu;
         JButton btn_te;
         JButton btn_to;
+
+        JButton btn_na;
+        JButton btn_ni;
+        JButton btn_nu;
+        JButton btn_ne;
+        JButton btn_no;
 
         JButton btn_ha;
         JButton btn_hi;
@@ -92,7 +98,7 @@ public class Main {
         JButton btn_n4;
 
         //JTextエリア変数を定義#
-        JTextArea text;
+        final JTextArea text;
 
 
 
@@ -136,6 +142,12 @@ public class Main {
         btn_tu = new JButton("つ");
         btn_te = new JButton("て");
         btn_to = new JButton("と");
+
+        btn_na = new JButton("な");
+        btn_ni = new JButton("に");
+        btn_nu = new JButton("ぬ");
+        btn_ne = new JButton("ね");
+        btn_no = new JButton("の");
 
         btn_ha = new JButton("は");
         btn_hi = new JButton("ひ");
@@ -190,12 +202,12 @@ public class Main {
         panel_K.setLayout(new GridLayout(5,1));
         panel_S.setLayout(new GridLayout(5,1));
         panel_T.setLayout(new GridLayout(5,1));
+        panel_N.setLayout(new GridLayout(5,1));
         panel_H.setLayout(new GridLayout(5,1));
         panel_M.setLayout(new GridLayout(5,1));
         panel_Y.setLayout(new GridLayout(5,1));
         panel_R.setLayout(new GridLayout(5,1));
         panel_W.setLayout(new GridLayout(5,1));
-        panel_N.setLayout(new GridLayout(5,1));
 
         //panel_ookiiのレイアウトをボーターレイアウトにする
         panel_ookii.setLayout(new BorderLayout());
@@ -224,6 +236,12 @@ public class Main {
         panel_T.add(btn_tu);
         panel_T.add(btn_te);
         panel_T.add(btn_to);
+
+        panel_N.add(btn_na);
+        panel_N.add(btn_ni);
+        panel_N.add(btn_nu);
+        panel_N.add(btn_ne);
+        panel_N.add(btn_no);
 
         panel_H.add(btn_ha);
         panel_H.add(btn_hi);
@@ -255,12 +273,6 @@ public class Main {
         panel_W.add(btn_we);
         panel_W.add(btn_wo);
 
-        panel_N.add(btn_nn);
-        panel_N.add(btn_n1);
-        panel_N.add(btn_n2);
-        panel_N.add(btn_n3);
-        panel_N.add(btn_n4);
-
         //パネルをボタンまとめるようパネルにセット
         botton_matomeru.add(panel_N);
         botton_matomeru.add(panel_W);
@@ -268,6 +280,7 @@ public class Main {
         botton_matomeru.add(panel_Y);
         botton_matomeru.add(panel_M);
         botton_matomeru.add(panel_H);
+        botton_matomeru.add(panel_N);
         botton_matomeru.add(panel_T);
         botton_matomeru.add(panel_S);
         botton_matomeru.add(panel_K);
@@ -276,13 +289,252 @@ public class Main {
         //ボタンまとめるようパネルをpanel_ookiiのCENTERにセット
         panel_ookii.add(botton_matomeru);
 
+        //ボタン処理を追加(46個)
+        btn_a.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("あ");
+            }
+        });
+        btn_i.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("い");
+            }
+        });
+        btn_u.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("う");
+            }
+        });
+        btn_e.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("え");
+            }
+        });
+        btn_o.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("お");
+            }
+        });
+        btn_ka.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("か");
+            }
+        });
+        btn_ki.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("き");
+            }
+        });
+        btn_ku.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("く");
+            }
+        });
+        btn_ke.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("け");
+            }
+        });
+        btn_ko.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("こ");
+            }
+        });
+        btn_sa.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("さ");
+            }
+        });
+        btn_si.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("し");
+            }
+        });
+        btn_su.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("す");
+            }
+        });
+        btn_se.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("せ");
+            }
+        });
+        btn_so.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("そ");
+            }
+        });
+
+        btn_ta.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("た");
+            }
+        });
+        btn_ti.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("ち");
+            }
+        });
+        btn_tu.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("つ");
+            }
+        });
+        btn_te.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("て");
+            }
+        });
+        btn_to.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("と");
+            }
+        });
+        btn_na.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("な");
+            }
+        });
+        btn_ni.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("に");
+            }
+        });
+        btn_nu.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("ぬ");
+            }
+        });
+        btn_ne.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("ね");
+            }
+        });
+        btn_no.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("の");
+            }
+        });
+        btn_ha.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("は");
+            }
+        });
+        btn_hi.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("ひ");
+            }
+        });
+        btn_hu.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("ふ");
+            }
+        });
+        btn_he.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("へ");
+            }
+        });
+        btn_ho.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("ほ");
+            }
+        });
+        btn_ma.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("ま");
+            }
+        });
+        btn_mi.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("み");
+            }
+        });
+        btn_mu.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("む");
+            }
+        });
+        btn_me.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("め");
+            }
+        });
+        btn_mo.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("も");
+            }
+        });
+        btn_ya.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("や");
+            }
+        });
+        btn_yu.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("ゆ");
+            }
+        });
+        btn_yo.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("よ");
+            }
+        });
+        btn_ra.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("ら");
+            }
+        });
+        btn_ri.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("り");
+            }
+        });
+        btn_ru.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("る");
+            }
+        });
+        btn_re.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("れ");
+            }
+        });
+        btn_ro.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("ろ");
+            }
+        });
+        btn_wa.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("わ");
+            }
+        });
+        btn_wo.addActionListener(new ActionListener(){
+
+            public void actionPerformed(ActionEvent ae){
+                text.append("を");
+            }
+        });
+        btn_nn.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                text.append("ん");
+            }
+        });
+
+
+
+
+
+
         //panel_ookiiのSOUNTHにテキストフィールドをセット
         panel_ookii.add(text,BorderLayout.SOUTH);
 
         //フレームにpanel_ookiiをセット
         frame.add(panel_ookii);
 
-        frame.setSize(250,100);
+        frame.setSize(450,300);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
