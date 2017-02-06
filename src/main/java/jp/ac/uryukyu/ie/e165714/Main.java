@@ -91,8 +91,8 @@ public class Main {
         JButton btn_n3;
         JButton btn_n4;
 
-        //JTextフィールド変数を定義#
-        JTextField text;
+        //JTextエリア変数を定義#
+        JTextArea text;
 
 
 
@@ -173,8 +173,8 @@ public class Main {
         btn_n3 = new JButton("");
         btn_n4 = new JButton("");
 
-        //テキストフィールドのオブジェクトを生成#
-        text = new JTextField("テキストフィールドです。",0);
+        //テキストエリアのオブジェクトを生成#
+        text = new JTextArea();
 
         //botton_matomeruパネルのオブジェクトを作成#
         botton_matomeru = new JPanel();
