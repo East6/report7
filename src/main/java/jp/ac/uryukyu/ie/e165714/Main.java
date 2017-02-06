@@ -9,190 +9,98 @@ import java.awt.*;
 import java.awt.event.*;
 public class Main {
     public static void main(String[] args){
-        //フレーム変数の定義
-        JFrame frame;
-
-        //パネル変数定義
-        JPanel panel_A;
-        JPanel panel_K;
-        JPanel panel_S;
-        JPanel panel_T;
-        JPanel panel_N;
-        JPanel panel_H;
-        JPanel panel_M;
-        JPanel panel_Y;
-        JPanel panel_R;
-        JPanel panel_W;
-
-        //ボタンまとめる用のパネルの変数を定義#
-        JPanel botton_matomeru;
-
-        //frameにaddするようのJPanelの変数を定義#
-        JPanel panel_ookii;
-
-        //ボタン変数定義
-        JButton btn_a;
-        JButton btn_i;
-        JButton btn_u;
-        JButton btn_e;
-        JButton btn_o;
-
-        JButton btn_ka;
-        JButton btn_ki;
-        JButton btn_ku;
-        JButton btn_ke;
-        JButton btn_ko;
-
-        JButton btn_sa;
-        JButton btn_si;
-        JButton btn_su;
-        JButton btn_se;
-        JButton btn_so;
-
-        JButton btn_ta;
-        JButton btn_ti;
-        JButton btn_tu;
-        JButton btn_te;
-        JButton btn_to;
-
-        JButton btn_na;
-        JButton btn_ni;
-        JButton btn_nu;
-        JButton btn_ne;
-        JButton btn_no;
-
-        JButton btn_ha;
-        JButton btn_hi;
-        JButton btn_hu;
-        JButton btn_he;
-        JButton btn_ho;
-
-        JButton btn_ma;
-        JButton btn_mi;
-        JButton btn_mu;
-        JButton btn_me;
-        JButton btn_mo;
-
-        JButton btn_ya;
-        JButton btn_yi;
-        JButton btn_yu;
-        JButton btn_ye;
-        JButton btn_yo;
-
-        JButton btn_ra;
-        JButton btn_ri;
-        JButton btn_ru;
-        JButton btn_re;
-        JButton btn_ro;
-
-        JButton btn_wa;
-        JButton btn_wi;
-        JButton btn_wu;
-        JButton btn_we;
-        JButton btn_wo;
-
-        JButton btn_nn;
-        JButton btn_n1;
-        JButton btn_n2;
-        JButton btn_n3;
-        JButton btn_n4;
-
-        //JTextエリア変数を定義#
-        final JTextArea text;
-
-
 
         //フレームのオブジェクト作成
-        frame = new JFrame("作るだけ");
+        JFrame frame = new JFrame("文字入力アプリ");
 
         //パネルのオブジェクト作成
-        panel_A = new JPanel();
-        panel_K = new JPanel();
-        panel_S = new JPanel();
-        panel_T = new JPanel();
-        panel_H = new JPanel();
-        panel_M = new JPanel();
-        panel_Y = new JPanel();
-        panel_R = new JPanel();
-        panel_W = new JPanel();
-        panel_N = new JPanel();
+        JPanel panel_A = new JPanel();
+        JPanel panel_K = new JPanel();
+        JPanel panel_S = new JPanel();
+        JPanel panel_T = new JPanel();
+        JPanel panel_H = new JPanel();
+        JPanel panel_M = new JPanel();
+        JPanel panel_Y = new JPanel();
+        JPanel panel_R = new JPanel();
+        JPanel panel_W = new JPanel();
+        JPanel panel_N = new JPanel();
 
 
         //ボタンのオブジェクト作成
-        btn_a = new JButton("あ");
-        btn_i = new JButton("い");
-        btn_u = new JButton("う");
-        btn_e = new JButton("え");
-        btn_o = new JButton("お");
+        JButton btn_a = new JButton("あ");
+        JButton btn_i = new JButton("い");
+        JButton btn_u = new JButton("う");
+        JButton btn_e = new JButton("え");
+        JButton btn_o = new JButton("お");
 
-        btn_ka = new JButton("か");
-        btn_ki = new JButton("き");
-        btn_ku = new JButton("く");
-        btn_ke = new JButton("け");
-        btn_ko = new JButton("こ");
+        JButton btn_ka = new JButton("か");
+        JButton btn_ki = new JButton("き");
+        JButton btn_ku = new JButton("く");
+        JButton btn_ke = new JButton("け");
+        JButton btn_ko = new JButton("こ");
 
-        btn_sa = new JButton("さ");
-        btn_si = new JButton("し");
-        btn_su = new JButton("す");
-        btn_se = new JButton("せ");
-        btn_so = new JButton("そ");
+        JButton btn_sa = new JButton("さ");
+        JButton btn_si = new JButton("し");
+        JButton btn_su = new JButton("す");
+        JButton btn_se = new JButton("せ");
+        JButton btn_so = new JButton("そ");
 
-        btn_ta = new JButton("た");
-        btn_ti = new JButton("ち");
-        btn_tu = new JButton("つ");
-        btn_te = new JButton("て");
-        btn_to = new JButton("と");
+        JButton btn_ta = new JButton("た");
+        JButton btn_ti = new JButton("ち");
+        JButton btn_tu = new JButton("つ");
+        JButton btn_te = new JButton("て");
+        JButton btn_to = new JButton("と");
 
-        btn_na = new JButton("な");
-        btn_ni = new JButton("に");
-        btn_nu = new JButton("ぬ");
-        btn_ne = new JButton("ね");
-        btn_no = new JButton("の");
+        JButton btn_na = new JButton("な");
+        JButton btn_ni = new JButton("に");
+        JButton btn_nu = new JButton("ぬ");
+        JButton btn_ne = new JButton("ね");
+        JButton btn_no = new JButton("の");
 
-        btn_ha = new JButton("は");
-        btn_hi = new JButton("ひ");
-        btn_hu = new JButton("ふ");
-        btn_he = new JButton("へ");
-        btn_ho = new JButton("ほ");
+        JButton btn_ha = new JButton("は");
+        JButton btn_hi = new JButton("ひ");
+        JButton btn_hu = new JButton("ふ");
+        JButton btn_he = new JButton("へ");
+        JButton btn_ho = new JButton("ほ");
 
-        btn_ma = new JButton("ま");
-        btn_mi = new JButton("み");
-        btn_mu = new JButton("む");
-        btn_me = new JButton("め");
-        btn_mo = new JButton("も");
+        JButton btn_ma = new JButton("ま");
+        JButton btn_mi = new JButton("み");
+        JButton btn_mu = new JButton("む");
+        JButton btn_me = new JButton("め");
+        JButton btn_mo = new JButton("も");
 
-        btn_ya = new JButton("や");
-        btn_yi = new JButton("");
-        btn_yu = new JButton("ゆ");
-        btn_ye = new JButton("");
-        btn_yo = new JButton("よ");
+        JButton btn_ya = new JButton("や");
+        JButton btn_yi = new JButton("");
+        JButton btn_yu = new JButton("ゆ");
+        JButton btn_ye = new JButton("");
+        JButton btn_yo = new JButton("よ");
 
-        btn_ra = new JButton("ら");
-        btn_ri = new JButton("り");
-        btn_ru = new JButton("る");
-        btn_re = new JButton("れ");
-        btn_ro = new JButton("ろ");
+        JButton btn_ra = new JButton("ら");
+        JButton btn_ri = new JButton("り");
+        JButton btn_ru = new JButton("る");
+        JButton btn_re = new JButton("れ");
+        JButton btn_ro = new JButton("ろ");
 
-        btn_wa = new JButton("わ");
-        btn_wi = new JButton("");
-        btn_wu = new JButton("");
-        btn_we = new JButton("");
-        btn_wo = new JButton("を");
+        JButton btn_wa = new JButton("わ");
+        JButton btn_wi = new JButton("");
+        JButton btn_wu = new JButton("");
+        JButton btn_we = new JButton("");
+        JButton btn_wo = new JButton("を");
 
-        btn_nn = new JButton("ん");
-        btn_n1 = new JButton("");
-        btn_n2 = new JButton("");
-        btn_n3 = new JButton("");
-        btn_n4 = new JButton("");
+        JButton btn_nn = new JButton("ん");
+        JButton btn_n1 = new JButton("");
+        JButton btn_n2 = new JButton("");
+        JButton btn_n3 = new JButton("");
+        JButton btn_n4 = new JButton("");
 
         //テキストエリアのオブジェクトを生成#
-        text = new JTextArea();
+        final JTextArea text = new JTextArea();
 
         //botton_matomeruパネルのオブジェクトを作成#
-        botton_matomeru = new JPanel();
+        JPanel botton_matomeru = new JPanel();
 
         //panel_ookiiパネルのオブジェクトを作成#
-        panel_ookii = new JPanel();
+        JPanel panel_ookii = new JPanel();
 
         //ボタンまとめる用のJPanelを5行一列のグリッドレイアウトにする。
         botton_matomeru.setLayout(new GridLayout(1,11));
